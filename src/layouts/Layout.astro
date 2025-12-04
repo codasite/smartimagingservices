@@ -72,7 +72,7 @@ const { title, description = "Speech therapy options for adults. Swallowing eval
       <div class="footer-content">
         <div class="footer-top">
           <a href="/" class="footer-logo">
-            <img src="/images/SDI-Final4.png" alt="Smart Dysphagia Imaging" class="footer-logo-img" />
+            <img src="/images/SDI-Final1.png" alt="Smart Dysphagia Imaging" class="footer-logo-img" />
           </a>
           
           <div class="footer-social">
@@ -145,7 +145,7 @@ const { title, description = "Speech therapy options for adults. Swallowing eval
     /* Backgrounds */
     --color-bg: #ffffff;
     --color-bg-light: #f9f9f9;
-    --color-footer: #1a1a2e;
+    --color-footer: #f0f0f0;
     
     /* Typography - Poppins like original */
     --font-main: 'Poppins', sans-serif;
@@ -429,7 +429,7 @@ const { title, description = "Speech therapy options for adults. Swallowing eval
   /* Footer */
   .footer {
     background: var(--color-footer);
-    color: white;
+    color: var(--color-text);
     padding: var(--spacing-lg) 0 var(--spacing-md);
     margin-top: auto;
   }
@@ -470,7 +470,7 @@ const { title, description = "Speech therapy options for adults. Swallowing eval
     justify-content: center;
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-text-dark);
     border-radius: 50%;
     color: white;
     transition: all var(--transition);
@@ -489,7 +489,7 @@ const { title, description = "Speech therapy options for adults. Swallowing eval
   }
 
   .footer-contact a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text);
     font-size: 0.9rem;
   }
 
@@ -503,12 +503,12 @@ const { title, description = "Speech therapy options for adults. Swallowing eval
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: var(--spacing-md) 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
   }
 
   .footer-nav a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text);
     font-size: 0.85rem;
   }
 
@@ -518,7 +518,7 @@ const { title, description = "Speech therapy options for adults. Swallowing eval
 
   .footer-copyright {
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-text-light);
     font-size: 0.8rem;
     margin-top: var(--spacing-md);
     margin-bottom: 0;
