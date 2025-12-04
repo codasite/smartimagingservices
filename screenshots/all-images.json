@@ -1,0 +1,38 @@
+[
+  {
+    "type": "img",
+    "src": "https://smartimagingservices.net/wp-content/uploads/2021/07/SDI-Final1-300x112.png",
+    "alt": "",
+    "classes": "attachment-medium size-medium wp-image-36"
+  },
+  {
+    "type": "img",
+    "src": "https://smartimagingservices.net/wp-content/uploads/2021/07/Screen-Shot-2019-03-04-at-2.05.07-PM-1-300x156.png",
+    "alt": "",
+    "classes": "attachment-medium size-medium wp-image-177"
+  },
+  {
+    "type": "img",
+    "src": "https://smartimagingservices.net/wp-content/uploads/2021/07/SDI-Final4-300x112.png",
+    "alt": "",
+    "classes": "attachment-medium size-medium wp-image-88"
+  },
+  {
+    "type": "background",
+    "src": "https://smartimagingservices.net/wp-content/uploads/2021/07/AdobeStock_299372852-scaled.jpeg",
+    "element": "DIV",
+    "classes": "elementor-widget-wrap elementor-element-populated"
+  },
+  {
+    "type": "background",
+    "src": "https://smartimagingservices.net/wp-content/uploads/2021/07/image-scoping.png",
+    "element": "DIV",
+    "classes": "elementor-widget-wrap elementor-element-populated"
+  },
+  {
+    "type": "background",
+    "src": "https://smartimagingservices.net/wp-content/uploads/2021/07/pexels-josh-willink-2701598-scaled.jpg",
+    "element": "DIV",
+    "classes": "elementor-widget-wrap elementor-element-populated"
+  }
+]

@@ -1,0 +1,322 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <!-- Hero Section with Beach Background -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Swallowing evaluations made easy.</h1>
+      <p>
+        Speech therapy options for adults. Services provided in your home, your doctor's office, 
+        or our clinic locations in Port St. Lucie and Daytona Beach, FL.
+      </p>
+      <a href="mailto:suzanne@smartimagingservices.net?subject=Patient%20Inquiry" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Our Specialty Section -->
+  <section class="specialty section">
+    <div class="container">
+      <h2>Our Specialty: F.E.E.S</h2>
+      <p class="specialty-subtitle">FEES: Fiberoptic Endoscopic Evaluation of Swallowing</p>
+      <div class="specialty-content">
+        <p>
+          FEES is one of two methods used to visualize the swallow in action. FEES is unique in that it allows clinicians 
+          to bring the evaluation to the patient (portable). This means no more expensive hospital trips and obtaining the 
+          results of the assessment is immediate.
+        </p>
+        <p class="highlight-text">
+          If you or a loved one suspect you may have difficulty swallowing or frequent pneumonias then you may be a candidate for FEES.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How is it done Section -->
+  <section class="info-section section">
+    <div class="container">
+      <div class="info-row">
+        <div class="info-image">
+          <img src="/images/image-scoping.png" alt="Beach boardwalk representing Florida locations" />
+        </div>
+        <div class="info-content">
+          <h2>How is it done?</h2>
+          <p>
+            FEES utilizes a small camera/scope to view the pharynx (throat) while the patient is eating. 
+            The assessment is extremely fast with minimal discomfort.
+          </p>
+          <p>
+            This assessment is for anyone experiencing signs of dysphagia or in an at risk population such as: 
+            neurological disorders, stroke victims, traumatic brain injuries, gastric diseases, oropharyngeal cancers, etc.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What can FEES do Section -->
+  <section class="info-section section">
+    <div class="container">
+      <div class="info-row reverse">
+        <div class="info-content">
+          <h2>What can FEES do for me?</h2>
+          <p>
+            FEES allows your therapist to directly view how your muscles and nerves work together to efficiently 
+            propel food as well as safely protect your airway. After FEES, your therapist can formulate a plan of 
+            care to target your specific needs.
+          </p>
+          <p>
+            If you have already been evaluated by an SLP and placed on a restricted/modified diet or utilize a 
+            feeding tube then you may be a candidate for re-evaluation. Recommendations for modified diets or 
+            feeding tubes without first obtaining a FEES or MBSS have been proven to be frequently inaccurate 
+            and is not considered evidenced-based practice.
+          </p>
+          <p>
+            Due to quickly advancing medical science, it may be difficult to find a therapist who is competent in 
+            reading/interpreting FEES or MBSS. We are here to help you find the right fit for you and will connect 
+            you with an experienced therapist in your area if our locations are inaccessible to you.
+          </p>
+          <p class="resource-note">
+            *Please review our resource tab to find current ethics issues regarding swallowing diagnostics and therapies.*
+          </p>
+          <a href="/about-fees" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="info-image">
+          <img src="/images/pexels-josh-willink-2701598-scaled.jpg" alt="Caring for patients" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASHA Section -->
+  <section class="asha-section section">
+    <div class="container">
+      <div class="asha-content">
+        <div class="asha-logo">
+          <img src="/images/Screen-Shot-2019-03-04-at-2.05.07-PM-1.png" alt="ASHA - American Speech-Language-Hearing Association" />
+        </div>
+        <div class="asha-text">
+          <h3>What ASHA says about bringing FEES to your facility:</h3>
+          <time datetime="2021-07-12">July 12, 2021</time>
+          <a href="https://leader.pubs.asha.org/doi/full/10.1044/leader.OTP.24032019.38" target="_blank" rel="noopener noreferrer" class="asha-link">
+            https://leader.pubs.asha.org/doi/full/10.1044/leader.OTP.24032019.38
+          </a>
+          <p class="asha-title">Build a Case For Instrumental Swallowing Assessments in Long-Term Care</p>
+          <p>Armed with facts and evidence, SLPs can help change policies that deny instrumental swallowing</p>
+          <a href="https://leader.pubs.asha.org/doi/full/10.1044/leader.OTP.24032019.38" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            See More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section with Beach Background */
+  .hero {
+    position: relative;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/images/AdobeStock_299372852-scaled.jpeg') center/cover no-repeat;
+    margin: 0 2rem;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    max-width: 900px;
+  }
+
+  .hero h1 {
+    color: var(--color-text-dark);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero p {
+    color: var(--color-text-dark);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Section Base */
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  /* Specialty Section */
+  .specialty {
+    text-align: center;
+    background: var(--color-bg);
+  }
+
+  .specialty h2 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .specialty-subtitle {
+    color: var(--color-text);
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .specialty-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .specialty-content p {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .highlight-text {
+    color: var(--color-text-dark);
+    font-weight: 500;
+    margin-top: var(--spacing-sm);
+  }
+
+  /* Info Sections */
+  .info-section {
+    background: var(--color-bg);
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+
+  .info-row.reverse {
+    direction: rtl;
+  }
+
+  .info-row.reverse > * {
+    direction: ltr;
+  }
+
+  .info-image {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .info-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .info-content h2 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .info-content p {
+    color: var(--color-text);
+    line-height: 1.8;
+  }
+
+  .resource-note {
+    font-style: italic;
+    color: var(--color-text);
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* ASHA Section */
+  .asha-section {
+    background: var(--color-bg);
+  }
+
+  .asha-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .asha-logo {
+    flex-shrink: 0;
+    width: 180px;
+  }
+
+  .asha-logo img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .asha-text h3 {
+    color: var(--color-text-dark);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .asha-text time {
+    display: block;
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .asha-link {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    word-break: break-all;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .asha-title {
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .asha-text > p:last-of-type {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero {
+      margin: 0 1rem;
+      min-height: 400px;
+    }
+
+    .info-row,
+    .info-row.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+
+    .info-image {
+      order: -1;
+    }
+
+    .asha-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .asha-logo {
+      width: 150px;
+    }
+  }
+</style>

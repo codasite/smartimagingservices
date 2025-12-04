@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Resources" description="Educational resources and advocacy information about dysphagia and swallowing disorders.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Resources</h1>
+      <p class="subtitle">Education, Advocacy & Information</p>
+    </div>
+  </section>
+
+  <section class="resources-section">
+    <div class="container">
+      <div class="resources-grid">
+        <a href="/resources/advocacy" class="resource-card">
+          <h2>Advocacy</h2>
+          <p>
+            Learn about current issues in dysphagia care, patient rights, and how to advocate 
+            for proper instrumental swallowing assessments.
+          </p>
+          <span class="resource-link">Explore Advocacy →</span>
+        </a>
+
+        <a href="/resources/education" class="resource-card">
+          <h2>Education & Information</h2>
+          <p>
+            Educational materials about dysphagia, FEES, swallowing disorders, and the latest 
+            evidence-based practices in swallowing evaluation.
+          </p>
+          <span class="resource-link">Learn More →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="container">
+      <div class="info-content">
+        <h2>Why These Resources Matter</h2>
+        <p>
+          Understanding swallowing disorders and the importance of proper evaluation is crucial for 
+          patients, families, and healthcare providers. Our resources are designed to empower you 
+          with knowledge and help you make informed decisions about dysphagia care.
+        </p>
+        <p>
+          We believe that evidence-based practice should be the standard in swallowing evaluation 
+          and treatment. Unfortunately, many patients are placed on modified diets or feeding tubes 
+          without first receiving an instrumental swallowing assessment like FEES or MBSS.
+        </p>
+        <p>
+          Through education and advocacy, we aim to improve the quality of care for individuals 
+          with swallowing disorders across Florida and beyond.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #54B8B1 0%, #3a9e99 100%);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+  }
+
+  .resources-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-bg-light);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .resource-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  }
+
+  .resource-card h2 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+  }
+
+  .resource-card p {
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+  }
+
+  .resource-link {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .resource-card:hover .resource-link {
+    color: #3a9e99;
+  }
+
+  .info-section {
+    padding: var(--spacing-xl) 0;
+    background: white;
+  }
+
+  .info-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .info-content h2 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .info-content p {
+    color: var(--color-text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .resources-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

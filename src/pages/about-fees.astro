@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About FEES" description="Learn about FEES - Fiberoptic Endoscopic Evaluation of Swallowing and meet Suzanne, CCC-SLP.">
+  <!-- Hero Banner -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>What can FEES do for me?</h1>
+      <p>
+        Swallowing problems or dysphagia is estimated to affect up to 15 million adults in the United States. 
+        Many sufferers are never appropriately diagnosed or treated, some living with serious consequences. 
+        Planning for effective management requires instrumental examination such as FEES (Fiberoptic Endoscopic Evaluation of Swallowing).
+      </p>
+    </div>
+  </section>
+
+  <!-- Dysphagia Signs Section -->
+  <section class="signs-section section">
+    <div class="container">
+      <div class="signs-grid">
+        <div class="signs-content">
+          <h2>Dysphagia signs and symptoms:</h2>
+          <p>
+            Symptoms can include: coughing/throat clearing while eating and drinking, difficulty chewing, 
+            difficulty propelling food from the front to back of the oral cavity, wet vocal quality, feeling 
+            of food or pills getting stuck, general feeling of difficulty swallowing, and frequent pneumonia.
+          </p>
+          <p>
+            The EAT-10 is a self-assessment that can provide patients with better language to identify and 
+            communicate what they are experiencing.
+          </p>
+          <a href="#" class="btn btn-outline">EAT-10 PDF ↗</a>
+        </div>
+        <div class="signs-image">
+          <img src="/images/dysphagia-symptoms.jpg" alt="Person experiencing swallowing difficulty" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost and Quality Section -->
+  <section class="cost-section section">
+    <div class="container">
+      <h2>Cost and Quality of Life impact from dysphagia:</h2>
+      <p>
+        Studies have found that SLPs are over-diagnosing and restricting patient's diets by almost 70% when 
+        using a basic bedside/clinical examination without instrumental visualization. This can result in 
+        reduced quality of life and increased expenses for patients and facilities. Overly restricted diets 
+        can sometimes be linked to dehydration, unnecessary feeding tube placement, and complicates the 
+        management of patients with CHF, URI, UTIs, etc.
+      </p>
+      <p>
+        The annual management of a patient on a feeding tube is estimated to be about $31,000. Thickened 
+        liquids are costly as well with the average annual expense of thickeners hovering between $2,000-$7,000.
+      </p>
+      <p>
+        Cost comparison of FEES vs. MBSS: When mobile FEES is not accessible, patients and facilities are 
+        subjected to the inefficiency and exorbitant cost of MBSS/VFSS at a hospital. Skilled Nursing Facilities 
+        pay on average $1,200-$2,000 for an MBSS/VFSS which entails transportation, radiology charges, diagnostic 
+        charges, exposure to radiation, consumption of barium, and companion/CNA assist. Mobile FEES allows 
+        patient's to stay in the comfort of the rooms or doctors office and receive real-time results for a 
+        fraction of the cost.
+      </p>
+    </div>
+  </section>
+
+  <!-- Meet Suzanne Section -->
+  <section class="suzanne-section section">
+    <div class="container">
+      <div class="suzanne-grid">
+        <div class="suzanne-content">
+          <h2>Suzanne is a CCC-SLP with a focus on swallowing diagnostics and treatment.</h2>
+          <p>
+            After graduating UCF's master's program, Suzanne completed additional advanced training in endoscopy 
+            for the assessment of swallowing and swallowing disorders. Suzanne's mission is to increase accessibility 
+            to thorough and accurate testing for people with dysphagia.
+          </p>
+          <h3>Certifications</h3>
+          <div class="certification-logo">
+            <img src="/images/speakout-logo.png" alt="SPEAK OUT! - Live with Intent certification" />
+          </div>
+          <a href="mailto:suzanne@smartimagingservices.net?subject=Patient%20Inquiry" class="btn btn-primary">Get In Contact</a>
+        </div>
+        <div class="suzanne-image">
+          <img src="/images/suzanne.jpg" alt="Suzanne - Speech Language Pathologist" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #54B8B1 0%, #3a9e99 100%);
+    padding: var(--spacing-xl) 0;
+  }
+
+  .page-hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .page-hero p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 800px;
+  }
+
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  /* Signs Section */
+  .signs-section {
+    background: white;
+  }
+
+  .signs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+
+  .signs-content h2 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .signs-content p {
+    color: var(--color-text);
+    line-height: 1.8;
+  }
+
+  .signs-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  /* Cost Section */
+  .cost-section {
+    background: white;
+  }
+
+  .cost-section h2 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cost-section p {
+    color: var(--color-text);
+    line-height: 1.8;
+    max-width: 900px;
+  }
+
+  /* Suzanne Section */
+  .suzanne-section {
+    background: white;
+  }
+
+  .suzanne-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+  }
+
+  .suzanne-content h2 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+  }
+
+  .suzanne-content h3 {
+    color: var(--color-text-dark);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+  }
+
+  .suzanne-content p {
+    color: var(--color-text);
+    line-height: 1.8;
+  }
+
+  .certification-logo {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .certification-logo img {
+    max-width: 200px;
+  }
+
+  .suzanne-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 900px) {
+    .signs-grid,
+    .suzanne-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .signs-image,
+    .suzanne-image {
+      order: -1;
+    }
+
+    .suzanne-image img {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+</style>

@@ -1,0 +1,585 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Speech therapy options for adults. Swallowing evaluations with FEES in Port St. Lucie and Daytona Beach, FL." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title} | Smart Dysphagia Imaging</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <header class="header">
+      <nav class="nav">
+        <a href="/" class="logo">
+          <img src="/images/SDI-Final1.png" alt="Smart Dysphagia Imaging" class="logo-img" />
+        </a>
+        
+        <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about-fees" class="nav-link">About FEES</a></li>
+          <li><a href="/services" class="nav-link">Services</a></li>
+          <li class="dropdown">
+            <a href="/resources" class="nav-link dropdown-toggle">
+              Resources
+              <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/resources/advocacy">Advocacy</a></li>
+              <li><a href="/resources/education">Education & Information</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="mailto:suzanne@smartimagingservices.net" class="nav-link dropdown-toggle">
+              Contact Us
+              <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="mailto:suzanne@smartimagingservices.net?subject=Patient%20Inquiry">For Patients</a></li>
+              <li><a href="mailto:suzanne@smartimagingservices.net?subject=Facility%20Provider%20Inquiry">For Facilities/Providers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-top">
+          <a href="/" class="footer-logo">
+            <img src="/images/SDI-Final4.png" alt="Smart Dysphagia Imaging" class="footer-logo-img" />
+          </a>
+          
+          <div class="footer-social">
+            <a href="https://facebook.com" aria-label="Facebook" class="social-link" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" aria-label="Instagram" class="social-link" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer-contact">
+            <a href="mailto:suzanne@smartimagingservices.net">suzanne@smartimagingservices.net</a>
+            <a href="tel:+17723420102">(772) 342-0102</a>
+          </div>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="/">Home</a>
+          <a href="/about-fees">About FEES</a>
+          <a href="/services">Services</a>
+          <a href="/resources">Resources ▾</a>
+          <a href="mailto:suzanne@smartimagingservices.net">Contact Us ▾</a>
+        </nav>
+
+        <p class="footer-copyright">© Smart Dysphagia Imaging</p>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      mobileMenuBtn?.addEventListener('click', () => {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+        navLinks?.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn?.contains(e.target as Node) && !navLinks?.contains(e.target as Node)) {
+          mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+          navLinks?.classList.remove('active');
+          mobileMenuBtn?.classList.remove('active');
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* Primary Colors - Matching original teal */
+    --color-primary: #54B8B1;
+    --color-primary-dark: #3a9e99;
+    --color-primary-light: #7dd3cf;
+    
+    /* Text colors */
+    --color-text: #54595f;
+    --color-text-dark: #333333;
+    --color-text-light: #7a7a7a;
+    
+    /* Backgrounds */
+    --color-bg: #ffffff;
+    --color-bg-light: #f9f9f9;
+    --color-footer: #1a1a2e;
+    
+    /* Typography - Poppins like original */
+    --font-main: 'Poppins', sans-serif;
+    --font-heading: 'Roboto Slab', serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
+    /* Layout */
+    --max-width: 1200px;
+    --transition: 0.3s ease;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+    background: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-text-dark);
+  }
+
+  h1 { font-size: clamp(2rem, 5vw, 3rem); }
+  h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); }
+  h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  a:hover {
+    color: var(--color-primary-dark);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary);
+    color: white;
+    padding: 8px 16px;
+    z-index: 10000;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-align: center;
+  }
+
+  .btn-primary {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-primary-dark);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--color-text-dark);
+    border: 2px solid var(--color-text-dark);
+  }
+
+  .btn-outline:hover {
+    background: var(--color-text-dark);
+    color: white;
+  }
+</style>
+
+<style>
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    height: 55px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    padding: 1rem 1.25rem;
+    transition: color var(--transition);
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  .dropdown-arrow {
+    transition: transform var(--transition);
+  }
+
+  .dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: var(--color-bg);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all var(--transition);
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 100;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    transition: all var(--transition);
+  }
+
+  .dropdown-menu li a:hover {
+    background: var(--color-bg-light);
+    color: var(--color-primary);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-text-dark);
+    transition: all var(--transition);
+  }
+
+  .hamburger {
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before { top: -7px; }
+  .hamburger::after { top: 7px; }
+
+  .mobile-menu-btn.active .hamburger {
+    background: transparent;
+  }
+
+  .mobile-menu-btn.active .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-menu-btn.active .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--color-footer);
+    color: white;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    margin-top: auto;
+  }
+
+  .footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .footer-logo-img {
+    height: 50px;
+    width: auto;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all var(--transition);
+  }
+
+  .social-link:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .footer-contact a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+  }
+
+  .footer-contact a:hover {
+    color: var(--color-primary);
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+  }
+
+  .footer-nav a:hover {
+    color: var(--color-primary);
+  }
+
+  .footer-copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 900px) {
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--color-bg);
+      flex-direction: column;
+      padding: 2rem;
+      gap: 0;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition);
+    }
+
+    .nav-links.active {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-link {
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      background: var(--color-bg-light);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition);
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      max-height: 200px;
+    }
+
+    .footer-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+</style>
